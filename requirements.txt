@@ -1,0 +1,8 @@
+sqlmodel
+fastAPI
+dotenv
+numpy
+pandas
+joblib
+scikit-learn
+tensorflow
