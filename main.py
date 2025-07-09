@@ -63,4 +63,4 @@ async def predict_csv(document_id: int, session: Session = Depends(get_session))
   }
   
   except Exception as e:
-    raise HTTPException(status_code=400, detail=f"Error al predecir: {str(e)}")  
+    raise HTTPException(status_code=400, detail=f"Error al predecir: {str(e)}")
