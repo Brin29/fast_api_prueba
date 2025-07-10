@@ -6,3 +6,4 @@ pandas
 joblib
 scikit-learn
 tensorflow
+psycopg2-binary
