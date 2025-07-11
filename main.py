@@ -54,7 +54,6 @@ async def upload_csv(degree: str = Form(...), file: UploadFile = File(...), sess
     except Exception as e:
       raise HTTPException(status_code=400, detail=f"Error al predecir: {str(e)}")
 
-
 @app.get('/predict/{document_id}')
 async def predict_csv(document_id: int, session: Session = Depends(get_session)):
   document = session.get(Document, document_id)
@@ -66,7 +65,6 @@ async def predict_csv(document_id: int, session: Session = Depends(get_session))
   "content": document.content,
   "predictions": document.prediction
   }
-  
   
 @app.get('/predict', response_model=list[Document])
 async def predicts(session: Session = Depends(get_session), offset: int = 0, limit: Annotated[int, Query(le=100)] = 100):
